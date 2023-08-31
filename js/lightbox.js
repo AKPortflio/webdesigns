@@ -9,7 +9,7 @@ var img1 = document.getElementById('img1');
 img1.addEventListener('click', function () {
   console.log('img1に入った');
 	// class: lightBoxIn　に背景画像を挿入する
-  lightBoxIn.style.backgroundImage = 'url("http://webdstudy.web.fc2.com/images/torii.jpg")';
+  lightBoxIn.style.backgroundImage = 'url("https://akportflio.github.io/webdesigns/images/torii.jpg")';
 	// class: laightBoxIn, lightBoxOut, dark　を有効にする
   lightBoxIn.classList.toggle('lightBoxInner');
   lightBoxOut.classList.toggle('lightBoxOuter');
@@ -26,7 +26,7 @@ console.log(dark);
 var img2 = document.getElementById('img2');
 img2.addEventListener('click', function () {
   console.log('img2に入った');
-	lightBoxIn.style.backgroundImage = 'url("http://webdstudy.web.fc2.com/images/seimon.jpg")';
+	lightBoxIn.style.backgroundImage = 'url("https://akportflio.github.io/webdesigns/images/seimon.jpg")';
   lightBoxIn.classList.toggle('lightBoxInner');
   lightBoxOut.classList.toggle('lightBoxOuter');
   dark.classList.toggle('blackOut');
@@ -35,7 +35,7 @@ img2.addEventListener('click', function () {
 var img3 = document.getElementById('img3');
 img3.addEventListener('click', function () {
   console.log('img3に入った');
-	lightBoxIn.style.backgroundImage = 'url("http://webdstudy.web.fc2.com/images/shaden.jpg")';
+	lightBoxIn.style.backgroundImage = 'url("https://akportflio.github.io/webdesigns/images/shaden.jpg")';
   lightBoxIn.classList.toggle('lightBoxInner');
   lightBoxOut.classList.toggle('lightBoxOuter');
   dark.classList.toggle('blackOut');
@@ -44,7 +44,7 @@ img3.addEventListener('click', function () {
 var img4 = document.getElementById('img4');
 img4.addEventListener('click', function () {
   console.log('img4に入った');
-	lightBoxIn.style.backgroundImage = 'url("http://webdstudy.web.fc2.com/images/ajisai.jpg")';
+	lightBoxIn.style.backgroundImage = 'url("https://akportflio.github.io/webdesigns/images/ajisai.jpg")';
   lightBoxIn.classList.toggle('lightBoxInner');
   lightBoxOut.classList.toggle('lightBoxOuter');
   dark.classList.toggle('blackOut');
@@ -53,7 +53,7 @@ img4.addEventListener('click', function () {
 var img5 = document.getElementById('img5');
 img5.addEventListener('click', function () {
   console.log('img5に入った');
-	lightBoxIn.style.backgroundImage = 'url("http://webdstudy.web.fc2.com/images/ema.jpg")';
+	lightBoxIn.style.backgroundImage = 'url("https://akportflio.github.io/webdesigns/images/ema.jpg")';
   lightBoxIn.classList.toggle('lightBoxInner');
   lightBoxOut.classList.toggle('lightBoxOuter');
   dark.classList.toggle('blackOut');
@@ -62,7 +62,7 @@ img5.addEventListener('click', function () {
 var img6 = document.getElementById('img6');
 img6.addEventListener('click', function () {
   console.log('img6に入った');
-	lightBoxIn.style.backgroundImage = 'url("http://webdstudy.web.fc2.com/images/komainu.jpg")';
+	lightBoxIn.style.backgroundImage = 'url("https://akportflio.github.io/webdesigns/images/komainu.jpg")';
   lightBoxIn.classList.toggle('lightBoxInner');
   lightBoxOut.classList.toggle('lightBoxOuter');
   dark.classList.toggle('blackOut');
