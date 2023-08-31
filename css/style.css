@@ -1,0 +1,281 @@
+@charset "utf-8";
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Comfortaa', cursive;
+  font-size: 10px;
+  color: #3A3A3A;
+}
+img {
+  vertical-align: bottom;
+}
+.top, .works {
+  max-width: 100%;
+  min-height: 100vh;
+}
+.backGround {
+  background: #FCFCFC;
+  position: relative;
+}
+.sticky {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  background: #FCFCFC;
+}
+.flexBox {
+  display: flex;
+}
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.subTitle {
+  font-size: 5vw;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+}
+/*					↓固定ナビ					*/
+nav {
+  max-width: 100%;
+}
+nav ul {
+  justify-content: center;
+  gap: 5%;
+  font-size: 15px;
+}
+/*					↑固定ナビ					*/
+/*					↓トップ					*/
+.top {
+  position: relative;
+}
+#colorLine {
+  width: 100%;
+  padding: 60px 0;
+  background: #d6d6d6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+	transition: 1s;
+}
+.top h1 {
+  font-size: 3vw;
+  font-weight: bold;
+  padding: 20px 25px;
+  border: solid 5px #555;
+  border-radius: 10px;
+  position: relative;
+  z-index: 10;
+  background: #fff;
+  box-shadow: 1px 1px 2px #222;
+}
+.top h1:hover {
+  box-shadow: 2px 2px 4px #000;
+}
+.top h2 {
+  display: block;
+  margin-top: 20px;
+  font-size: 8vw;
+  width: 9em;
+  color: #fff;
+}
+/*					↑トップ					*/
+/*					↓プロフィール					*/
+#PROFILE {
+	padding: 5vh 10vw 10vh 10vw;
+}
+.profile {
+	max-width: 100%;
+  margin: 10vh 10vh 30vh 10vh ;
+  min-height: 50vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
+border: solid 1px #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.profile ul {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10%;
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 15px;
+}
+.profile ul li {
+  margin-bottom: 20px;
+}
+.profile ul li:last-child {
+  margin-bottom: 0;
+}
+.profile ul li:nth-child(2n + 1) {
+  flex: 40%;
+  text-align: right;
+  font-weight: bold;
+}
+.profile ul li:nth-child(2n + 2) {
+  flex: 50%;
+  text-align: left;
+}
+.profile ul:last-child {
+	
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+	margin-bottom: 0;
+	flex-wrap: wrap;
+}
+.profile ul:last-child li {
+  font-weight: normal;
+	flex: 100%;
+	text-align: center;
+}
+.profile ul:last-child li:first-child {
+  font-weight: bold;
+}
+/*					↑プロフィール					*/
+/*					↓作品					*/
+.works {
+  padding: 50px auto;
+  margin-bottom: 50px;
+}
+.worksArticle {
+  margin-bottom: 50px;
+}
+.worksArticle:last-child {
+  margin-bottom: 0;
+}
+.works .flexBox {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.works h3 {
+  font-size: 4vw;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.SS {
+  margin: 0 auto;
+  display: block;
+  max-width: 300px;
+  height: auto;
+  box-shadow: 1px 1px 4px #888;
+}
+.SS:hover {
+  filter: brightness(1.1);
+  transition: 0.2s ease;
+}
+/*					↑作品					*/
+/*					↓使用ソフト					*/
+.tools {
+  max-width: 100%;
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+.tools .flexBox {
+  justify-content: center;
+  gap: 3%;
+}
+.tools .flexBox .flexBox {
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-size: 15px;
+}
+.icons {
+  width: 45px;
+}
+/*					↑使用ソフト					*/
+@media (min-width:600px) {
+  .sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+    z-index: 100;
+    background: #FCFCFC;
+  }
+  nav ul {
+    justify-content: flex-end;
+    gap: 5%;
+    font-size: 15px;
+    padding-right: 20px;
+  }
+  .profile {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+  .works {
+    padding: 50px 0;
+  }
+  .works .flexBox {
+    max-width: 1000px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5%;
+  }
+  .works h3 {
+    margin-bottom: 50px;
+  }
+}
+/*				JavaScript用CSS　				*/
+/*Design Portfolioを下から上にあげる効果*/
+#DP {
+  display: block;
+  overflow: hidden;
+  animation-name: slideUp;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 0.8;
+  }
+}
+/*Design Portfolioを下から上にあげる効果*/
+/*各idのブロックを下から上にあげる効果*/
+#PROFILE, #WORKS, #TOOLS {
+  opacity: 0;
+}
+.appearUP {
+  display: block;
+  overflow: hidden;
+  animation-name: slideUpId;
+  animation-duration: 0.8s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes slideUpId {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*各idのブロックを下から上にあげる効果*/
+/*				JavaScript用CSS　				*/
