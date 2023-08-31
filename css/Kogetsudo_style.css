@@ -1,0 +1,67 @@
+@charset "utf-8";
+body {
+  font-family: 'sans-serif';
+  font-size: 10px;
+  color: #3A3A3A;
+}
+.flexBox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.top, .visual, .text {
+	max-width: 100%;
+	min-height: 100vh;
+}
+.visual img {
+	display: block;
+	vertical-align: bottom;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto 30px;
+}
+.visual .graphic {
+	max-height: 90vh;
+	width: auto;
+	box-shadow: 1px 1px 2px #ddd;
+	margin-top: 5vh;
+}
+.visual, .text {	
+	padding: 0 5%;
+	margin: 0 auto;
+}
+.text {
+	padding: 15%;
+}
+.top {
+	text-align: center;
+}
+h1 {
+	font-size: max(5vw, 30px);
+	font-weight: bold;
+	text-align: center;
+	background: #fca897;
+	margin-bottom: 30px;
+}
+p {
+	margin-bottom: 1em;
+	line-height: 1.4;
+	font-size: 15px;
+}
+h2 {
+	margin-top: 50px;
+	margin-bottom: 30px;
+	display: block;
+	font-size: max(3vw, 20px);
+	text-align: center;
+	background: #fca897;
+}
+.back {
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: blue;
+	text-align: center;
+	margin-bottom: 30px;
+}

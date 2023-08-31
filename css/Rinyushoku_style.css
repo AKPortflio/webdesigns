@@ -1,0 +1,629 @@
+@charset "utf-8";
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 10px;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  color: #404040;
+}
+img {
+  object-fit: cover;
+  vertical-align: bottom;
+}
+.screen {
+  background: #fcfbf7;
+}
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.subTitle {
+  font-size: 1.5rem;
+  text-align: center;
+  padding-bottom: 40px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #bbb;
+}
+.paddingBottom {
+  margin-bottom: 50px;
+}
+.marginBottm {
+  margin-bottom: 50px;
+}
+.text h3 {
+  text-align: center;
+  font-size: 1.1rem;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+p {
+  line-height: 2;
+  font-size: 1rem;
+}
+.Bold {
+  font-weight: bold;
+}
+/*			↓フェードアウトのJS用css			*/
+.disapearArea {
+  opacity: 1;
+}
+body.disappear .disapearArea {
+  animation-name: DisapearAnime;
+  animation-duration: 0.4s;
+  animation-delay: 0;
+  animation-fill-mode: forwards;
+  opacity: 1;
+  pointer-events: auto;
+  background: #fcfbf7
+}
+.animation .disapearArea {
+  opacity: 0;
+  pointer-events: auto;
+}
+@keyframes DisapearAnime {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*			↑フェードアウトのJS用css			*/
+/*			↓フェードインのJS用css			*/
+#mainBody {
+  background: #fcfbf7
+}
+.content {
+  opacity: 0;
+  pointer-events: none;
+}
+body.appear .content {
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  pointer-events: auto;
+}
+.animation .content {
+  opacity: 1;
+  pointer-events: auto;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*			↑フェードインのJS用css			*/
+/*			↓ふわっとするヤツ用css			*/
+.fuwa {
+  opacity: 0;
+}
+.opc {
+  opacity: 0;
+  filter: blur(10px);
+}
+/*			↑ふわっとするヤツ用css			*/
+/*			↓画像を読み込ませるだけのcss			*/
+.invisible img {
+  opacity: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+/*			↑画像を読み込ませるだけのcss			*/
+/*　　　　　↓インデックス　　　　*/
+/*　　　　　↓ヒーロー　　　　　*/
+.hero_img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: relative;
+}
+/*ヒーローの位置と範囲*/
+.siteTitle a {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: calc(6em + 60px);
+  padding: 25px 30px 35px;
+  transform: translate(-50%, 50%);
+  font-size: min(10vw, 30px);
+}
+/*ヒーローの文字設定*/
+.siteTitle a {
+  color: #404040;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1.5;
+  text-shadow: 1px 1px 2px #aaa;
+  background: rgba(240, 240, 240, 0.6);
+  border-radius: 45px;
+  text-align: center;
+  box-shadow: 1px 1px 3px #444;
+}
+.siteTitle a:hover {
+  color: #404040;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 2px 2px 4px #444;
+}
+.hero .copy {
+  position: absolute;
+  bottom: 1vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  color: #1E1E1E;
+}
+/*　　　　　↑ヒーロー　　　　　*/
+/*　　　　　↑インデックス　　　　*/
+/*　　　　　↓メイン　　　　*/
+.flexBox {
+  display: flex;
+}
+.fixed {
+  position: fixed;
+  bottom: 8px;
+  z-index: 100;
+}
+/*　　　　　↓ヘッダー　　　　　*/
+.header {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  background: #fcfbf7;
+}
+/*　　　　　↓ロゴ　　　　　*/
+.logo {
+  width: 15vh;
+  margin-bottom: 5px;
+}
+/*　　　　　↑ロゴ　　　　　*/
+/*　　　　　↓固定ナビゲーション　　　　　*/
+.menu a {
+  display: block;
+}
+.menu .flexBox {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.menu .flexBox li {
+  flex: 33.333%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background: linear-gradient(#e8f7c3 0%, #cdf495 50%, #e8f7c3 100%);
+  border: solid 1px #f0f0f0;
+  border-radius: 5px;
+  text-align: center;
+}
+/*　　　　　↑固定ナビゲーション　　　　　*/
+/*　　　　　↓ヘッダー画像　　　　　*/
+.headerImg {
+  display: block;
+  max-width: 1600px;
+  height: auto;
+  position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+.headerImg img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.headerImg .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50%));
+  width: calc(5vw * 14);
+  background: rgba(230, 230, 230, 0.7);
+  padding: 15px 5px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+.headerImg .text p {
+  line-height: 1.5;
+  font-size: min(4vw, 25px);
+  font-weight: bold;
+  color: #3a3a3a;
+  text-align: center;
+}
+/*　　　　　↑ヘッダー画像　　　　　*/
+/*　　　　　↑ヘッダー　　　　　*/
+/*　　　　　↓おしらせ　　　　　*/
+.news .text {
+  font-size: 15px;
+  padding-top: 0;
+}
+.news .flexBox {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.news .flexBox li {
+  padding: 10px 0;
+  margin-bottom: 15px;
+}
+.news ul li:nth-child(2n + 1) {
+  flex: 1000px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.news ul li:nth-child(2n + 2) {
+  flex: 60vw;
+  border-bottom: solid 1px #a0a0a0;
+}
+.news time {
+  border-bottom: solid 1px #a0a0a0;
+}
+/*　　　　　↑おしらせ　　　　　*/
+/*　　　　　↓商品について　　　　　*/
+.product {
+  background: url("../images/pro-foto-babyface.jpg") no-repeat;
+  max-width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+.product .textBox {
+  width: 80vw;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.7);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+/*　　　　　↑商品について　　　　　*/
+/*　　　　　↓プランのご案内　　　　*/
+.plan {
+  background: url("../images/food-foto-slicelemon.jpg");
+  max-width: 100%;
+  height: 1650px;
+  background-size: cover;
+  position: relative;
+}
+/*.plan .text {
+  padding-bottom: 50px;
+}*/
+.plan .textBox {
+  width: 80vw;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(240, 240, 240, 0.7);
+  /*padding-top: 40px;
+  padding-bottom: 40px;*/
+  text-align: center;
+}
+.plan .text .senden {
+  font-weight: bold;
+  background: #ecffd1;
+  border-radius: 15px;
+  padding: 30px 20px;
+  margin-bottom: 50px;
+}
+.plan .planExplain {
+  background: #ecffd1;
+  border-radius: 15px;
+  padding: 30px 20px;
+  /*margin-bottom: 50px;*/
+  overflow: hidden;
+}
+.plan p {
+  line-height: 1.3;
+}
+.plan span {
+  font-size: 15px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+/*　　　　　↓プランアーティクル　　　　*/
+.planArticle {
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 50px;
+}
+.planBox {
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background: #f0f0f0;
+  border-radius: 15px;
+  border: solid 1px #c0c0c0;
+}
+.redBox {
+  margin: 0 auto 20px;
+  width: 8em;
+  padding: 10px;
+  background: linear-gradient(#f57f7f 0%, #facaca 50%, #f57f7f 100%);
+  border-radius: 10px;
+}
+.greenBox {
+  margin: 0 auto 20px;
+  width: 8em;
+  padding: 10px;
+  background: linear-gradient(#8df57f 0%, #c7f5c1 50%, #8df57f 100%);
+  border-radius: 10px;
+}
+.grayBox {
+  margin: 0 auto 20px;
+  width: 8em;
+  padding: 10px;
+  background: linear-gradient(#c0c0c0 0%, #ebebeb 50%, #c0c0c0 100%);
+  border-radius: 10px;
+}
+.redBox, .greenBox, .grayBox {
+  cursor: pointer;
+}
+.redBox:hover, .greenBox:hover, .grayBox:hover {
+  opacity: 0.8;
+}
+.planBox p:first-child {
+  font-size: 20px;
+}
+.planBox p {
+  font-weight: bold;
+}
+/*　　　　　↑プランアーティクル　　　　*/
+/*　　　　　↑プランのご案内　　　　*/
+/*　　　　　↓お客様の声　　　　*/
+.reaction {
+  padding-top: 70px;
+}
+.voice {
+  background: #ecffd1;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+  border-radius: 15px;
+}
+.reactionInner {
+  flex-direction: column;
+  gap: 30px;
+}
+.customerImg img {
+  width: 60px;
+}
+.voice p {
+  line-height: 1.5;
+  font-size: 15px;
+}
+/*　　　　　↑お客様の声　　　　*/
+/*　　　　　↓お問い合わせ　　　　*/
+.contact {
+  padding-top: 50px;
+  padding-bottom: 150px;
+}
+.contact span {
+  font-weight: bold;
+  font-size: 15px;
+}
+.contact input {
+  border: solid 2px #c4fa78;
+  border-radius: 5px;
+}
+.radioBtn {
+  margin-bottom: 20px;
+}
+input[name="name"], input[name="tel"], input[name="postnum"] {
+  width: 120px;
+  height: 36px;
+  margin-bottom: 20px;
+}
+input[name="mail"], input[name="postAdrs"], input[name="bilding"] {
+  width: 250px;
+}
+input[name="mail"], input[name="bilding"] {
+  margin-bottom: 20px
+}
+input[name="postnum"] {
+  margin-bottom: 0;
+}
+.subBtn {
+  display: block;
+  margin: 40px auto 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 1;
+  vertical-align: middle;
+  width: 9em;
+  padding: 10px 15px;
+}
+.subBtn {
+  border: none;
+  background: linear-gradient(#e8f7c3 0%, #cdf495 50%, #e8f7c3 100%);
+}
+.subBtn:hover {
+  opacity: 0.7;
+}
+input[name="submit"] {
+  border: none;
+}
+/*　　　　　↑お問い合わせ　　　　*/
+/*　　　　　↑メイン　　　　*/
+/*　　　　　↓フッター　　　　*/
+.footer {
+  text-align: center;
+  font-weight: bold;
+  border: solid 2px #000;
+  padding: 10px;
+  margin: 0 2px;
+}
+.footer h3 {
+  padding: 15px 0;
+  font-size: 14px;
+}
+.footer p {
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+.footer .aim {
+  text-align: left;
+  margin-bottom: 40px;
+  list-style: circle;
+}
+.back {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: blue;
+  text-align: center;
+  margin-bottom: 20px;
+}
+/*　　　　　↑フッター　　　　*/
+.hiddenZone {
+  height: 200px;
+}
+/**/
+/*							パソコンでの表示							*/
+/**/
+@media (min-width:700px) {
+  .wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 9vw;
+  }
+  .fixed {
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+  /*　　　　　↓ロゴ　　　　　*/
+  .logo {
+    width: 200px;
+    margin-bottom: 5px;
+  }
+  /*　　　　　↑ロゴ　　　　　*/
+  /*　　　　　↓固定ナビゲーション　　　　　*/
+  .header {
+    justify-content: space-between;
+  }
+  .menu .flexBox {
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 660px;
+  }
+  .menu .flexBox li {
+    flex: 0 1 110px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-weight: bold;
+    font-size: 11px;
+  }
+  .menu .flexBox li:hover {
+    opacity: 0.6;
+  }
+  /*　　　　　↑固定ナビゲーション　　　　　*/
+  /*トップ*/
+  /*トップ*/
+  /*おしらせ*/
+  .news {
+    padding-top: 50px;
+    height: 60vh;
+  }
+  .news ul li:nth-child(2n + 1) {
+    text-align: center;
+    flex: 30%;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: solid 1px #a0a0a0;
+  }
+  .news ul li:nth-child(2n + 2) {
+    flex: 70%;
+    margin-bottom: 15px;
+    border-bottom: solid 1px #a0a0a0;
+  }
+  .news time {
+    border: none;
+  }
+  /*おしらせ*/
+  /*商品について*/
+  /*商品について*/
+  /*宅配プラン*/
+  .plan {
+    max-width: 100%;
+    height: 1600px;
+    background-size: cover;
+    position: relative;
+  }
+  .planArticle {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .planBox {
+    flex: 40%;
+  }
+  /*宅配プラン*/
+  /*お客様の声*/
+  .reaction {
+    padding-bottom: 100px;
+  }
+  .voice {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .voice .text p:first-child {
+    width: 230px;
+    font-size: 13px;
+    margin-bottom: 15px;
+    border-bottom: solid 1px #aaa;
+  }
+  /*お客様の声*/
+  /*お問い合わせ*/
+  /*お問い合わせ*/
+  /*フッター*/
+  .footer {
+    border: solid 3px #000;
+    margin: 10px 10px 20px 10px;
+  }
+  .footer .wrapper {
+    padding: 30px 10vw;
+  }
+  .footer .caution {
+    margin-bottom: 50px;
+  }
+  .footer h3 {
+    margin: 15px 0 20px;
+    font-size: 17px;
+  }
+  .footer p, .aim {
+    font-size: 15px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  /*.aim {
+		margin: 0 auto;
+	}*/
+  .aim li {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  .hiddenZone {
+    height: 0;
+  }
+  /*フッター*/
+}

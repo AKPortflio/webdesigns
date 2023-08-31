@@ -1,0 +1,467 @@
+@charset "utf-8";
+/*全体の幅の設定*/
+html {
+  scroll-behavior: smooth;
+}
+.pray, .eventYear, .access {
+  width: 100%;
+  padding: 100px 0;
+}
+.menu, .content {
+  background: f4f3f9;
+}
+.image {
+  display: block;
+  margin: 0 auto;
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+}
+.flexBox {
+  display: flex;
+}
+p {
+  margin-bottom: 1.3rem;
+}
+/*全体の幅の設定*/
+/*全体のフォントの設定*/
+body {
+  font-size: 10px;
+  font-family: 'Zen Antique', serif;
+  color: #1f1f1f;
+}
+.menu ul li, .content {
+  font-size: 1.15rem;
+}
+.subTitle {
+  padding-bottom: 50px;
+  font-size: 2rem;
+  text-align: center;
+}
+.text h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 10px 0;
+}
+/*全体のフォントの設定*/
+/*wrapper設定*/
+.wrapper {
+  margin: 0 auto;
+  width: 70vw;
+}
+/*wrapper設定*/
+/*ロード画面*/
+.loading {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 1;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.loaded {
+  opacity: 0;
+}
+/*ロード画面*/
+/*メニュー*/
+.content {
+  position: relative
+}
+#menuIcon {
+  padding: 8px;
+  background: #fff;
+  position: fixed;
+  top: 3vh;
+  right: 3%;
+  border-radius: 3px;
+  border: solid 2px #999;
+  cursor: pointer;
+}
+.menu {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  background: linear-gradient(rgba(255, 71, 9, 0.7) 0%, rgba(250, 12, 12, 0.7) 100%);
+  z-index: 100;
+  transition: 0.3s;
+}
+.menu ul {
+  width: 130px;
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.menu ul li {
+  color: aliceblue;
+  width: 130px;
+  text-align: center;
+  border-bottom: solid 1px #fff;
+  line-height: 1.4
+}
+.menu a {
+  display: block;
+}
+.menu a:hover {
+  background: #fc2121;
+  transition: 0.2s;
+}
+/*メニュー*/
+/*トップ　ヒーロー設定*/
+.hero {
+  background: #0e0000;
+}
+.hero .hero_img img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: relative;
+}
+#pageTitle {
+  width: 7em;
+  position: absolute;
+  top: 75vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: min(10vw, 40px);
+  color: azure;
+  text-align: center;
+  line-height: 1.7;
+}
+.hero a {
+  display: block;
+}
+.hero a:hover {
+  text-shadow: 1px 1px 1px #fff;
+  transition: 0.2s;
+}
+/*トップ　ヒーロー設定*/
+/*神社について*/
+.about {
+  width: 100%;
+  padding: 100px 0 100px 0;
+  background-image: url("../images/washi_wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.about h2 {
+  padding-top: 50px;
+}
+/*神社について*/
+/*御祈願*/
+.pray {
+  background: #f0f0f0;
+  text-align: center;
+}
+.pray .image {
+  width: 50vw
+}
+.pray .text {
+  color: aliceblue;
+  text-shadow: 1px 1px 2px #000;
+  background-image: url("../images/2525870.png");
+  background-size: 220px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+/*御祈願*/
+/*年中行事*/
+.eventYear {
+  background-image: url("../images/washi_wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.eventYear table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.eventYear th {
+  width: 40%;
+  height: 3em;
+  text-align: center;
+  border-right: solid 2px #777
+}
+.eventYear .tableHead th:last-child {
+  border: none;
+  text-align: left;
+  padding-left: 2em;
+}
+.text td {
+  width: 60%;
+  text-align: left;
+  padding-left: 1em;
+  padding-bottom: 2em;
+}
+#last_table {
+  padding-bottom: 0;
+}
+/*年中行事*/
+/*境内*/
+.keidai {
+  background-image: url("../images/jariIll_wallpaper.jpg");
+}
+.keidai .wrapper {
+  max-width: 600px;
+}
+.keidai .filter {
+  background: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  height: 100%;
+  padding: 100px 0;
+}
+.keidai .flexBox {
+  flex-direction: column;
+}
+.keidai .image {
+  width: min(100%, 600px);
+}
+.keidai .text {
+  /*text-shadow: 0px 0px 1px #000;*/
+  padding-bottom: 70px;
+  text-align: center;
+}
+.keidai .text:last-child {
+  padding-bottom: 0;
+}
+.keidai .articleBox img {
+  cursor: pointer;
+  box-shadow: 1px 1px 2px #333;
+}
+.keidai .articleBox img:hover {
+  box-shadow: 1px 1px 4px #333;
+  filter: brightness(1.1);
+}
+/*境内*/
+/*アクセス*/
+.access {
+  padding: 50px 0;
+}
+.access img {
+  display: none;
+}
+.access.wrapper {
+  max-width: 600px;
+}
+.access h3 {
+  font-size: 1.8rem;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.access .flexBox {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.access .flexBox p:nth-child(2n + 1) {
+  flex: 35%;
+  text-align: center;
+}
+.access .flexBox p:nth-child(2n + 2) {
+  flex: 65%;
+}
+/*アクセス*/
+/*フッター*/
+#footer {
+  background: #ff4709;
+  text-align: center;
+}
+/*フッター*/
+/*注意事項*/
+.notice {
+  margin: 60px 30px 50px;
+  padding: 50px;
+  font-size: 14px;
+  line-height: 1.3;
+  border: solid 2px #000;
+}
+.notice h3 {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.notice .aim {
+  box-sizing: border-box;
+  list-style: circle;
+  margin-left: 1.5em;
+}
+.notice .aim li {
+  margin-bottom: 10px;
+}
+.notice .aim li:last-child {
+  margin-bottom: 30px;
+}
+.back {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: blue;
+  text-align: center;
+}
+/*注意事項*/
+/*パソコン*/
+@media (min-width:500px) {
+  /*PC固定メニュー*/
+  #menuIcon {
+    display: none;
+  }
+  .menu {
+    display: inherit;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    max-width: 100%;
+    height: 3em;
+  }
+  .menu {
+    background: none;
+  }
+  .menu ul {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(rgba(239, 239, 239, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(239, 239, 239, 0.9) 100%);
+    border-bottom: solid 1px #000;
+  }
+  .menu ul li {
+    height: 100%;
+    flex: 7em;
+    border: none;
+  }
+  .menu a {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #1f1f1f;
+    vertical-align: middle;
+  }
+  .menu a:hover {
+    background: #fbb;
+    transition: 0.3s ease;
+  }
+  /*PC固定メニュー*/
+  /*PC境内*/
+  .keidai .flexBox {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5%;
+  }
+  .keidai .articleBox {
+    flex: 40%;
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+  /*PC境内*/
+  /*PCアクセス*/
+  .access {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
+  .access h3 {
+    display: none;
+  }
+  .access img {
+    display: block;
+    max-width: 300px;
+  }
+  /*PCアクセス*/
+}
+@media (min-width:1000px) {
+  .keidai .articleBox {
+    flex: 30%
+  }
+}
+/*ライトボックス用CSS*/
+.screen {
+  position: relative;
+}
+.blackOut {
+  background: #fff;
+  position: fixed;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+}
+.lightBoxOuter {
+  background: rgba(252, 226, 215, 0.8);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 15;
+  width: 80vw;
+  height: calc(80vw / 1.5);
+}
+.lightBoxInner {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  width: 70vw;
+  height: calc(70vw / 1.5);
+}
+.lightBoxOuter, .lightBoxInner {
+  animation-name: page-anime;
+  animation-duration: 0.3s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+/*ライトボックス用CSS*/
+/*			↓フェードインのJS用css			*/
+#mainBody {
+  background: #fcfbf7
+}
+.content {
+  opacity: 0;
+  pointer-events: none;
+}
+body.appear .content {
+  animation-name: page-anime;
+  animation-duration: 0.4s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  opacity: 0.4;
+  pointer-events: auto;
+}
+.animation .content {
+  opacity: 1;
+  pointer-events: auto;
+}
+@keyframes page-anime {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*			↑フェードインのJS用css			*/
